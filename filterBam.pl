@@ -51,4 +51,5 @@ while (my $tempLine = <TEMP>)
 close OUT;
 print "read $readCount (printed $printedCount)\n";
 print `samtools view -bS $output.tmp.sam > $output`;
+print `rm $output.tmp.sam`;
 print "Finished. Produced  $output\n";
